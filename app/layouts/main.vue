@@ -104,6 +104,7 @@
 
 
 <script setup>
+import '../styles/main.scss'
 import {Trash2, SquareSplitHorizontal, Reply, ChevronRight, ArrowDownToLine } from "lucide-vue-next";
 import { handleSendEmail, handleDeleteEmail, GetCurrentUser } from "~~/lib/api";
 import { onMounted, ref, computed, watch } from "vue";
