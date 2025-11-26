@@ -118,6 +118,9 @@
       &-title {
         font-weight: 500;
         margin-bottom: 4px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
 
       &-text {
