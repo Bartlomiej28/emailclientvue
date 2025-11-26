@@ -1,0 +1,34 @@
+.button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s;
+  text-decoration: none;
+
+  &--primary {
+    background: var(--primary-color);
+    color: #fff;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  &--outline {
+    background: transparent;
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+
+    &:hover {
+      background: var(--primary-color);
+      color: #fff;
+    }
+  }
+
+  &--large {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+}

@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Noto Sans', sans-serif;
+    color: var(--text-primary);
+    background-color: var(--bg-light);
+    margin: 0;
+    line-height: 1.5;
+}
+
+.container {
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+.section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+
+    &--color-secondary {
+        background-color: var(--secondary-color);
+    }
+
+    &__heading {
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 700;
+        color: var(--text-primary);
+        letter-spacing: -0.025em;
+        margin-top: 0;
+        margin-bottom: 1rem;
+    }
+
+    &__subtitle {
+        font-size: 1.125rem;
+        color: var(--text-secondary);
+        max-width: 48rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.button {
+    min-width: 84px;
+    max-width: 480px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    height: 2.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.015em;
+    border: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
+
+    &--primary {
+        background-color: var(--primary-color);
+        color: var(--bg-white);
+
+        &:hover {
+            opacity: 0.9;
+        }
+    }
+
+    &--secondary {
+        background-color: transparent;
+        color: var(--primary-color);
+        border-color: var(--primary-color);
+
+        &:hover {
+            background-color: var(--primary-color);
+            color: var(--bg-white);
+        }
+    }
+
+    &--large {
+        height: 3.5rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        font-size: 1.125rem;
+    }
+
+    &--cta {
+        background-color: var(--bg-white);
+        color: var(--primary-color);
+        box-shadow: var(--shadow-lg);
+
+        &:hover {
+            background-color: #f0f4f8;
+            box-shadow: var(--shadow-2xl);
+            transform: scale(1.05);
+        }
+    }
+
+    &__text {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.2;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: scaleX(1);
+    }
+    50% {
+        transform: scaleX(1.05);
+    }
+}

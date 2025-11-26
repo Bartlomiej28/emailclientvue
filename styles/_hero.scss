@@ -1,0 +1,93 @@
+.hero-section {
+    position: relative;
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--bg-white);
+    overflow: hidden;
+    text-align: center;
+
+    @media (min-width: 768px) {
+        min-height: 90vh;
+    }
+
+    &__background {
+        position: absolute;
+        inset: 0;
+        background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkEQ9KCmYgSz5yPUidhd9LwEZo7NELW-_vr_zYEP_SLNahK44fvdH9U2grXrtIjbD-uSkDbfEv81mR2D2WebGwd6KFppEow6NYptR4WKzYy7ljvVW6KNAA48OuINvCPYroq5STEkmW75jQWu_qR-JT5eye-BPFfXKh6_dSDplWjT6f6uFXm5nsPlt_3k08i7agbmhqPQJbGeReL6w_ctHk2CF7XKYmTV8wh6iV4jPp-mdi5CzJeLTZU8Je_-vUEQrmtfK98Pgthp4");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+    }
+
+    &__overlay {
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.1), transparent);
+        animation: pulse 10s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+
+    &__content {
+        position: relative;
+        z-index: 10;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        font-weight: 900;
+        line-height: 1.1;
+        letter-spacing: -0.05em;
+        margin-bottom: 1.5rem;
+        text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+        @media (min-width: 768px) {
+            font-size: 4.5rem;
+        }
+    }
+
+    &__subtitle {
+        font-size: 1.125rem;
+        max-width: 64rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 2.5rem;
+        color: #e2e8f0;
+
+        @media (min-width: 768px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__cta-group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        @media (min-width: 640px) {
+            flex-direction: row;
+        }
+    }
+
+    &__learn-more {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--bg-white);
+        text-decoration: none;
+        transition: color 0.2s ease-in-out;
+
+        &:hover {
+            color: #e2e8f0;
+        }
+    }
+
+    &__icon {
+        height: 1.25rem;
+        width: 1.25rem;
+    }
+}
